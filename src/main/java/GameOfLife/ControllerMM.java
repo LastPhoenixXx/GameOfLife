@@ -1,9 +1,12 @@
 package GameOfLife;
 
+import java.awt.event.ActionListener;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
+//import java.util.Timer;
+//import java.util.TimerTask;
+
+import javax.swing.Timer;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -20,12 +23,12 @@ public class ControllerMM implements Initializable {
 			but76, but77, but78, but79, but80, but81, but82, but83, but84, but85, but86, but87, but88, but89, but90,
 			but91, but92, but93, but94, but95, but96, but97, but98, but99, but100;
 	@FXML
-	private Button stratButton;
+	private Button startButton;
 
 	public Button[][] butList;
 	public int[][] neighList;
 	public String[][] statusList;
-	
+
 	boolean flop = false;
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -35,14 +38,15 @@ public class ControllerMM implements Initializable {
 
 		for (int i = 0; i < 10; i++)
 			for (int j = 0; j < 10; j++) {
-				butList[i][j].setText(i + "" + j);
+				butList[i][j].setText("");
 
 			}
 	}
 
 	@FXML
 	public void startGen(ActionEvent e) {
-		neighList = getNeighboursArr(statusList);	
+//		startButton.setVisible(false);
+		neighList = getNeighboursArr(statusList);
 		statusList = getNewStatus(statusList, neighList);
 		initTime();
 	}
@@ -94,10 +98,6 @@ public class ControllerMM implements Initializable {
 			for (int j = 0; j < 10; j++)
 				statList[i][j] = "NONE";
 		return statList;
-	}
-
-	public void setStatus(Button b, String status) {
-
 	}
 
 	public String prepairStep(String status, int neighbours) {
@@ -152,30 +152,54 @@ public class ControllerMM implements Initializable {
 				}
 			}
 		}
-		System.out.println(count);
 		return count;
 	}
-	
+
 	public void initTime() {
-		int delay = 500;
-		Timer timer = new Timer(true);
-		timer.schedule(new TimerTask() {
-			  @Override
-			  public void run() {
-				  flop = !flop;
-					for (int i = 0; i < 10; i++) {
-						for (int j = 0; j < 10; j++) {
-							if (flop) {
-								statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
-								butList[i][j].setStyle(getColor(statusList[i][j]));
-							} else {
-								statusList[i][j] = finishStep(statusList[i][j]);
-								butList[i][j].setStyle(getColor(statusList[i][j]));								
-							}
+		int delay = 2000;
+//			Timer timer = new Timer(true);	
+//			TimerTask tt = new TimerTask() {
+//				@Override
+//				public void run() {
+//					flop = !flop;
+//					for (int i = 0; i < 10; i++) {
+//						for (int j = 0; j < 10; j++) {
+//							if (flop) {
+//								statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
+//								butList[i][j].setStyle(getColor(statusList[i][j]));
+//							} else {
+//								statusList[i][j] = finishStep(statusList[i][j]);
+//								butList[i][j].setStyle(getColor(statusList[i][j]));
+//							}
+//						}
+//					}
+//				}
+//			};
+//			timer.scheduleAtFixedRate(tt, 3000, 100);
+
+		Timer timer = new Timer(delay, new ActionListener() {
+
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				flop = !flop;
+				for (int i = 0; i < 10; i++) {
+					for (int j = 0; j < 10; j++) {
+						if (flop) {
+							System.out.println("is flop");
+							statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
+							butList[i][j].setStyle(getColor(statusList[i][j]));
+						} else {
+							System.out.println("not flop");
+							statusList[i][j] = finishStep(statusList[i][j]);
+							butList[i][j].setStyle(getColor(statusList[i][j]));
 						}
 					}
-			  }
-			}, delay);
+				}
+			}
+
+		});
+		timer.setRepeats(true);
+		timer.start();
+		
 	}
 
 }
