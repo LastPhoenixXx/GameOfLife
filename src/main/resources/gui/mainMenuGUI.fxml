@@ -107,7 +107,7 @@
       <Button fx:id="but98" layoutX="485.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
       <Button fx:id="but99" layoutX="537.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
       <Button fx:id="but100" layoutX="589.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="startButton" layoutX="482.0" layoutY="628.0" mnemonicParsing="false" onAction="#startGen" prefHeight="52.0" prefWidth="110.0" text="Start" textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="startButton" layoutX="458.0" layoutY="628.0" mnemonicParsing="false" onAction="#startGen" prefHeight="54.0" prefWidth="134.0" text="Start" textAlignment="JUSTIFY" wrapText="true">
          <font>
             <Font name="Imprint MT Shadow" size="28.0" />
          </font></Button>
@@ -116,7 +116,7 @@
             <Font name="Imprint MT Shadow" size="28.0" />
          </font>
       </Button>
-      <Button fx:id="exitButton" layoutX="1273.0" layoutY="25.0" mnemonicParsing="false" onAction="#exit" prefHeight="29.0" prefWidth="62.0" text="Exit" textAlignment="JUSTIFY" wrapText="true">
+      <Button fx:id="exitButton" layoutX="1257.0" layoutY="25.0" mnemonicParsing="false" onAction="#exit" prefHeight="29.0" prefWidth="78.0" text="Exit" textAlignment="JUSTIFY" wrapText="true">
          <font>
             <Font name="Imprint MT Shadow" size="15.0" />
          </font>
@@ -141,5 +141,55 @@
             <Font name="Imprint MT Shadow" size="13.0" />
          </font>
       </Button>
+      <Label fx:id="statusLbl" layoutX="173.0" layoutY="40.0" prefHeight="42.0" prefWidth="417.0" textFill="RED">
+         <font>
+            <Font name="Imprint MT Shadow" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="ruleLbl" layoutX="928.0" layoutY="84.0" text="RULES" textFill="WHITE">
+         <font>
+            <Font name="Imprint MT Shadow" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule1" layoutX="728.0" layoutY="144.0" prefHeight="54.0" prefWidth="612.0" text="Rule1" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule2" layoutX="728.0" layoutY="218.0" prefHeight="54.0" prefWidth="612.0" text="Rule2" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule3" layoutX="728.0" layoutY="278.0" prefHeight="54.0" prefWidth="612.0" text="Rule3" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule31" layoutX="770.0" layoutY="347.0" prefHeight="54.0" prefWidth="558.0" text="Rule31" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule32" layoutX="770.0" layoutY="401.0" prefHeight="54.0" prefWidth="558.0" text="Rule32" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule4" layoutX="728.0" layoutY="460.0" prefHeight="54.0" prefWidth="612.0" text="Rule4" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule41" layoutX="770.0" layoutY="511.0" prefHeight="54.0" prefWidth="558.0" text="Rule41" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="rule42" layoutX="770.0" layoutY="565.0" prefHeight="54.0" prefWidth="558.0" text="Rule42" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

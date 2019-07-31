@@ -30,6 +30,8 @@ public class ControllerMM implements Initializable {
 	private Button stopButton;
 	@FXML
 	private Button exitButton;
+	@FXML
+	private Label statusLbl;
 
 	@FXML
 	private Label chooseLang;
@@ -39,6 +41,8 @@ public class ControllerMM implements Initializable {
 	private Button langButUA;
 	@FXML
 	private Button langButRU;
+	@FXML
+	private Label ruleLbl, rule1, rule2, rule3, rule31, rule32, rule4, rule41, rule42;
 
 	public Button[][] butList;
 	public int[][] neighList;
@@ -48,6 +52,35 @@ public class ControllerMM implements Initializable {
 	boolean stop = true;
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		langButUA.setVisible(false);
+
+		statusLbl.setText("");
+		rule1.setWrapText(true);
+		rule1.setText("1. Each cell can be in two states: to be “alive” (filled) or to be “dead” (empty).\r\n"
+				+ "The cell has eight neighbors surrounding it.");
+		rule2.setWrapText(true);
+		rule2.setText(
+				"2. The distribution of living cells at the beginning of the game is called the first generation (Use LMB to select a cell)");
+		rule3.setWrapText(true);
+		rule3.setText(
+				"3. Each next generation is calculated based on the previous one by the following rules (Use Start to start):");	
+		rule31.setWrapText(true);
+		rule31.setText(
+				"in an empty (dead) cell, next to which there are exactly three living cells, life begins;");
+		rule32.setWrapText(true);
+		rule32.setText(
+				"if a living cell has two or three living neighbors, then that cell continues to live; otherwise, if there are less than two neighbors or more than three, the cell dies (\"from loneliness\" or \"from overpopulation\")");
+		rule4.setWrapText(true);
+		rule4.setText(
+				"4. The game is terminated if:");
+		rule41.setWrapText(true);
+		rule41.setText(
+				"on the field there will be no \"live\" cells");
+		rule42.setWrapText(true);
+		rule42.setText(
+				"at the next step, none of the cells change their state");
+		
+		
 		butList = getButArr();
 		statusList = getStatusArr();
 		neighList = getNeighboursArr(statusList);
@@ -66,7 +99,7 @@ public class ControllerMM implements Initializable {
 		stop = false;
 		neighList = getNeighboursArr(statusList);
 		statusList = getNewStatus(statusList, neighList);
-
+		statusLbl.setText("");
 		initTime();
 	}
 
@@ -150,6 +183,7 @@ public class ControllerMM implements Initializable {
 	}
 
 	public String finishStep(String status) {
+
 		if (status.equals("BORN"))
 			return "LIVE";
 		else if (status.equals("DIED"))
@@ -208,6 +242,12 @@ public class ControllerMM implements Initializable {
 						if (flop) {
 							statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
 							butList[i][j].setStyle(getColor(statusList[i][j]));
+							if(stop)
+								for (int n = 0; i < 10; i++) {
+									for (int m = 0; j < 10; j++) {
+										butList[n][m].setStyle(getColor("NONE"));
+									}
+								}
 						} else {
 							statusList[i][j] = finishStep(statusList[i][j]);
 							butList[i][j].setStyle(getColor(statusList[i][j]));
@@ -223,21 +263,54 @@ public class ControllerMM implements Initializable {
 
 	@FXML
 	public void changeLang(ActionEvent e) {
-		String lang = "en";
-		String country = "EN";
 		String butName = (String) ((Button) e.getSource()).getText();
-		if (butName.equals("UA")) {
-			lang = "ua";
-			country = "UA";
-		} else if (butName.equals("EN")) {
-			lang = "en";
-			country = "EN";
+		if (butName.equals("EN")) {
+			startButton.setText("Start");
+			stopButton.setText("Stop");
+			exitButton.setText("Exit");
+			chooseLang.setText("Choose language: ");
+			
+			ruleLbl.setText("RULES");
+			rule1.setText("1. Each cell can be in two states: to be “alive” (filled) or to be “dead” (empty).\r\n"
+					+ "The cell has eight neighbors surrounding it.");
+			rule2.setText(
+					"2. The distribution of living cells at the beginning of the game is called the first generation (Use LMB to select a cell)");
+			rule3.setText(
+					"3. Each next generation is calculated based on the previous one by the following rules (Use Start to start):");
+			rule31.setText(
+					"in an empty (dead) cell, next to which there are exactly three living cells, life begins;");
+			rule32.setText(
+					"if a living cell has two or three living neighbors, then that cell continues to live; otherwise, if there are less than two neighbors or more than three, the cell dies (\"from loneliness\" or \"from overpopulation\")");
+			rule4.setText(
+					"4. The game is terminated if:");
+			rule41.setText(
+					"on the field there will be no \"live\" cells");
+			rule42.setText(
+					"at the next step, none of the cells change their state");
 		} else if (butName.equals("RU")) {
-			lang = "ru";
-			country = "RU";
+			startButton.setText("Старт");
+			stopButton.setText("Стоп");
+			exitButton.setText("Выход");
+			chooseLang.setText("Выберите язык: ");
+			
+			ruleLbl.setText("ПРАВИЛА");
+			rule1.setText(
+					"1. Каждая клетка может находиться в двух состояниях: быть «живой» (заполненной) или быть «мёртвой» (пустой). Клетка имеет восемь соседей, окружающих её.");
+			rule2.setText(
+					"2. Распределение живых клеток в начале игры называется первым поколением(Используйте ЛКМ для выбора клетки).");
+			rule3.setText(
+					"3. Каждое следующее поколение рассчитывается на основе предыдущего по таким правилам(Используйте Старт для начала):");
+			rule31.setText(
+					"в пустой (мёртвой) клетке, рядом с которой ровно три живые клетки, зарождается жизнь;");
+			rule32.setText(
+					"если у живой клетки есть две или три живые соседки, то эта клетка продолжает жить; в противном случае, если соседей меньше двух или больше трёх, клетка умирает («от одиночества» или «от перенаселённости»)");
+			rule4.setText(
+					"4. Игра прекращается, если:");
+			rule41.setText(
+					"на поле не останется ни одной «живой» клетки");
+			rule42.setText(
+					"при очередном шаге ни одна из клеток не меняет своего состояния");
 		}
-
-		Locale currentLocale = new Locale(lang, country);
 	}
 
 }
