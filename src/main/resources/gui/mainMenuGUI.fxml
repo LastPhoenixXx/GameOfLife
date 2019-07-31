@@ -1,111 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="762.0" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOfLife.ControllerMM">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@gui.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOfLife.ControllerMM">
    <children>
-      <Button fx:id="but1" layoutX="121.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but2" layoutX="173.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but3" layoutX="225.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but4" layoutX="277.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but5" layoutX="329.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but6" layoutX="381.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but7" layoutX="433.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but8" layoutX="485.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but9" layoutX="537.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but10" layoutX="589.0" layoutY="21.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but11" layoutX="121.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but12" layoutX="173.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but13" layoutX="225.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but14" layoutX="277.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but15" layoutX="329.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but16" layoutX="381.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but17" layoutX="433.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but18" layoutX="485.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but19" layoutX="537.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but20" layoutX="589.0" layoutY="73.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but21" layoutX="121.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but22" layoutX="173.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but23" layoutX="225.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but24" layoutX="277.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but25" layoutX="329.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but26" layoutX="381.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but27" layoutX="433.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but28" layoutX="485.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but29" layoutX="537.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but30" layoutX="589.0" layoutY="125.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but31" layoutX="121.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but32" layoutX="173.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but33" layoutX="225.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but34" layoutX="277.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but35" layoutX="329.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but36" layoutX="381.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but37" layoutX="433.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but38" layoutX="485.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but39" layoutX="537.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but40" layoutX="589.0" layoutY="177.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but41" layoutX="121.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but42" layoutX="173.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but43" layoutX="225.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but44" layoutX="277.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but45" layoutX="329.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but46" layoutX="381.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but47" layoutX="433.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but48" layoutX="485.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but49" layoutX="537.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but50" layoutX="589.0" layoutY="229.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but51" layoutX="121.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but52" layoutX="173.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but53" layoutX="225.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but54" layoutX="277.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but55" layoutX="329.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but56" layoutX="381.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but57" layoutX="433.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but58" layoutX="485.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but59" layoutX="537.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but60" layoutX="589.0" layoutY="281.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but61" layoutX="121.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but62" layoutX="173.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but63" layoutX="225.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but64" layoutX="277.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but65" layoutX="329.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but66" layoutX="381.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but67" layoutX="433.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but68" layoutX="485.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but69" layoutX="537.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but70" layoutX="589.0" layoutY="333.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but71" layoutX="121.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but72" layoutX="173.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but73" layoutX="225.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but74" layoutX="277.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but75" layoutX="329.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but76" layoutX="381.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but77" layoutX="433.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but78" layoutX="485.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but79" layoutX="537.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but80" layoutX="589.0" layoutY="385.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but81" layoutX="121.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but82" layoutX="173.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but83" layoutX="225.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but84" layoutX="277.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but85" layoutX="329.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but86" layoutX="381.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but87" layoutX="433.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but88" layoutX="485.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but89" layoutX="537.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but90" layoutX="589.0" layoutY="437.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but91" layoutX="121.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but92" layoutX="173.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but93" layoutX="225.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but94" layoutX="277.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but95" layoutX="329.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but96" layoutX="381.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but97" layoutX="433.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but98" layoutX="485.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but99" layoutX="537.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="but100" layoutX="589.0" layoutY="489.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
-      <Button fx:id="startButton" layoutX="659.0" layoutY="503.0" mnemonicParsing="false" onAction="#startGen" prefHeight="25.0" prefWidth="89.0" text="Start" />
+      <Button fx:id="but1" layoutX="121.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but2" layoutX="173.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but3" layoutX="225.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but4" layoutX="277.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but5" layoutX="329.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but6" layoutX="381.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but7" layoutX="433.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but8" layoutX="485.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but9" layoutX="537.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but10" layoutX="589.0" layoutY="97.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but11" layoutX="121.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but12" layoutX="173.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but13" layoutX="225.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but14" layoutX="277.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but15" layoutX="329.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but16" layoutX="381.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but17" layoutX="433.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but18" layoutX="485.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but19" layoutX="537.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but20" layoutX="589.0" layoutY="149.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but21" layoutX="121.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but22" layoutX="173.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but23" layoutX="225.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but24" layoutX="277.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but25" layoutX="329.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but26" layoutX="381.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but27" layoutX="433.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but28" layoutX="485.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but29" layoutX="537.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but30" layoutX="589.0" layoutY="201.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but31" layoutX="121.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but32" layoutX="173.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but33" layoutX="225.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but34" layoutX="277.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but35" layoutX="329.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but36" layoutX="381.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but37" layoutX="433.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but38" layoutX="485.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but39" layoutX="537.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but40" layoutX="589.0" layoutY="253.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but41" layoutX="121.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but42" layoutX="173.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but43" layoutX="225.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but44" layoutX="277.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but45" layoutX="329.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but46" layoutX="381.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but47" layoutX="433.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but48" layoutX="485.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but49" layoutX="537.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but50" layoutX="589.0" layoutY="305.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but51" layoutX="121.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but52" layoutX="173.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but53" layoutX="225.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but54" layoutX="277.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but55" layoutX="329.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but56" layoutX="381.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but57" layoutX="433.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but58" layoutX="485.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but59" layoutX="537.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but60" layoutX="589.0" layoutY="357.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but61" layoutX="121.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but62" layoutX="173.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but63" layoutX="225.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but64" layoutX="277.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but65" layoutX="329.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but66" layoutX="381.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but67" layoutX="433.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but68" layoutX="485.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but69" layoutX="537.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but70" layoutX="589.0" layoutY="409.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but71" layoutX="121.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but72" layoutX="173.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but73" layoutX="225.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but74" layoutX="277.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but75" layoutX="329.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but76" layoutX="381.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but77" layoutX="433.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but78" layoutX="485.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but79" layoutX="537.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but80" layoutX="589.0" layoutY="461.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but81" layoutX="121.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but82" layoutX="173.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but83" layoutX="225.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but84" layoutX="277.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but85" layoutX="329.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but86" layoutX="381.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but87" layoutX="433.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but88" layoutX="485.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but89" layoutX="537.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but90" layoutX="589.0" layoutY="513.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but91" layoutX="121.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but92" layoutX="173.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but93" layoutX="225.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but94" layoutX="277.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but95" layoutX="329.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but96" layoutX="381.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but97" layoutX="433.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but98" layoutX="485.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but99" layoutX="537.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="but100" layoutX="589.0" layoutY="565.0" mnemonicParsing="false" onAction="#chooseCell" prefHeight="52.0" prefWidth="52.0" text="Button" />
+      <Button fx:id="startButton" layoutX="482.0" layoutY="628.0" mnemonicParsing="false" onAction="#startGen" prefHeight="52.0" prefWidth="110.0" text="Start" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="28.0" />
+         </font></Button>
+      <Button fx:id="stopButton" layoutX="170.0" layoutY="628.0" mnemonicParsing="false" onAction="#stopGen" prefHeight="52.0" prefWidth="110.0" text="Stop" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="1273.0" layoutY="25.0" mnemonicParsing="false" onAction="#exit" prefHeight="29.0" prefWidth="62.0" text="Exit" textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Imprint MT Shadow" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="chooseLang" layoutX="875.0" layoutY="718.0" text="Choose language:" textFill="WHITE">
+         <font>
+            <Font name="Imprint MT Shadow" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="langButUA" layoutX="1072.0" layoutY="713.0" mnemonicParsing="false" onAction="#changeLang" prefHeight="42.0" prefWidth="42.0" text="UA">
+         <font>
+            <Font name="Imprint MT Shadow" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="langButEN" layoutX="1137.0" layoutY="713.0" mnemonicParsing="false" onAction="#changeLang" prefHeight="42.0" prefWidth="42.0" text="EN">
+         <font>
+            <Font name="Imprint MT Shadow" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="langButRU" layoutX="1201.0" layoutY="713.0" mnemonicParsing="false" onAction="#changeLang" prefHeight="42.0" prefWidth="42.0" text="RU">
+         <font>
+            <Font name="Imprint MT Shadow" size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

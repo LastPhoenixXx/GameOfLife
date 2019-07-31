@@ -24,7 +24,7 @@ public class App extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			primaryStage.setResizable(false);
-			primaryStage.setFullScreen(false);
+			primaryStage.setFullScreen(true);
 			primaryStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
 			primaryStage.setTitle("The Game Of Life");
 			primaryStage.setScene(scene);

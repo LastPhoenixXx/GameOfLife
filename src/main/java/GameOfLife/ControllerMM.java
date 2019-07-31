@@ -1,17 +1,19 @@
 package GameOfLife;
 
-import java.awt.event.ActionListener;
+//import java.awt.event.ActionListener;
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
-//import java.util.Timer;
-//import java.util.TimerTask;
+import java.util.Timer;
+import java.util.TimerTask;
 
-import javax.swing.Timer;
+//import javax.swing.Timer;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 
 public class ControllerMM implements Initializable {
 	@FXML
@@ -24,12 +26,26 @@ public class ControllerMM implements Initializable {
 			but91, but92, but93, but94, but95, but96, but97, but98, but99, but100;
 	@FXML
 	private Button startButton;
+	@FXML
+	private Button stopButton;
+	@FXML
+	private Button exitButton;
+
+	@FXML
+	private Label chooseLang;
+	@FXML
+	private Button langButEN;
+	@FXML
+	private Button langButUA;
+	@FXML
+	private Button langButRU;
 
 	public Button[][] butList;
 	public int[][] neighList;
 	public String[][] statusList;
 
 	boolean flop = false;
+	boolean stop = true;
 
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		butList = getButArr();
@@ -45,28 +61,51 @@ public class ControllerMM implements Initializable {
 
 	@FXML
 	public void startGen(ActionEvent e) {
-//		startButton.setVisible(false);
+		startButton.setVisible(false);
+		stopButton.setVisible(true);
+		stop = false;
 		neighList = getNeighboursArr(statusList);
 		statusList = getNewStatus(statusList, neighList);
+
 		initTime();
 	}
 
 	@FXML
-	public void chooseCell(ActionEvent e) {
-		Button but = (Button) e.getSource();
-		for (int i = 0; i < 10; i++)
+	public void stopGen(ActionEvent e) {
+		startButton.setVisible(true);
+		stopButton.setVisible(false);
+		statusList = getStatusArr();
+		for (int i = 0; i < 10; i++) {
 			for (int j = 0; j < 10; j++) {
-				if (but.equals(butList[i][j])) {
-					if (statusList[i][j].equals("NONE")) {
-						statusList[i][j] = "LIVE";
-						but.setStyle(getColor(statusList[i][j]));
-					} else if (statusList[i][j].equals("LIVE")) {
-						statusList[i][j] = "NONE";
-						but.setStyle(getColor(statusList[i][j]));
-					}
-				}
-
+				butList[i][j].setStyle(getColor(statusList[i][j]));
 			}
+		}
+		stop = true;
+	}
+
+	@FXML
+	public void exit() {
+		System.exit(0);
+	}
+
+	@FXML
+	public void chooseCell(ActionEvent e) {
+		if (stop) {
+			Button but = (Button) e.getSource();
+			for (int i = 0; i < 10; i++)
+				for (int j = 0; j < 10; j++) {
+					if (but.equals(butList[i][j])) {
+						if (statusList[i][j].equals("NONE")) {
+							statusList[i][j] = "LIVE";
+							but.setStyle(getColor(statusList[i][j]));
+						} else if (statusList[i][j].equals("LIVE")) {
+							statusList[i][j] = "NONE";
+							but.setStyle(getColor(statusList[i][j]));
+						}
+					}
+
+				}
+		}
 	}
 
 	public String[][] getNewStatus(String[][] status, int[][] neigh) {
@@ -156,50 +195,49 @@ public class ControllerMM implements Initializable {
 	}
 
 	public void initTime() {
-		int delay = 2000;
-//			Timer timer = new Timer(true);	
-//			TimerTask tt = new TimerTask() {
-//				@Override
-//				public void run() {
-//					flop = !flop;
-//					for (int i = 0; i < 10; i++) {
-//						for (int j = 0; j < 10; j++) {
-//							if (flop) {
-//								statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
-//								butList[i][j].setStyle(getColor(statusList[i][j]));
-//							} else {
-//								statusList[i][j] = finishStep(statusList[i][j]);
-//								butList[i][j].setStyle(getColor(statusList[i][j]));
-//							}
-//						}
-//					}
-//				}
-//			};
-//			timer.scheduleAtFixedRate(tt, 3000, 100);
-
-		Timer timer = new Timer(delay, new ActionListener() {
-
-			public void actionPerformed(java.awt.event.ActionEvent e) {
+		int delay = 500;
+		Timer timer = new Timer(true);
+		TimerTask tt = new TimerTask() {
+			@Override
+			public void run() {
+				if (stop)
+					this.cancel();
 				flop = !flop;
 				for (int i = 0; i < 10; i++) {
 					for (int j = 0; j < 10; j++) {
 						if (flop) {
-							System.out.println("is flop");
 							statusList[i][j] = prepairStep(statusList[i][j], neighList[i][j]);
 							butList[i][j].setStyle(getColor(statusList[i][j]));
 						} else {
-							System.out.println("not flop");
 							statusList[i][j] = finishStep(statusList[i][j]);
 							butList[i][j].setStyle(getColor(statusList[i][j]));
+							neighList = getNeighboursArr(statusList);
 						}
 					}
 				}
 			}
+		};
+		if (!stop)
+			timer.scheduleAtFixedRate(tt, 0, delay);
+	}
 
-		});
-		timer.setRepeats(true);
-		timer.start();
-		
+	@FXML
+	public void changeLang(ActionEvent e) {
+		String lang = "en";
+		String country = "EN";
+		String butName = (String) ((Button) e.getSource()).getText();
+		if (butName.equals("UA")) {
+			lang = "ua";
+			country = "UA";
+		} else if (butName.equals("EN")) {
+			lang = "en";
+			country = "EN";
+		} else if (butName.equals("RU")) {
+			lang = "ru";
+			country = "RU";
+		}
+
+		Locale currentLocale = new Locale(lang, country);
 	}
 
 }
